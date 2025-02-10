@@ -7,57 +7,63 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f4;
-            padding: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+            margin: 0;
         }
-        #fact-container {
-            background: white;
+        .container {
+            text-align: center;
+            background-color: #fff;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            max-width: 500px;
-            margin: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            border: none;
-            background: #007BFF;
+            background-color: #007bff;
             color: white;
-            font-size: 16px;
-            cursor: pointer;
+            border: none;
+            padding: 10px 20px;
             border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
         }
         button:hover {
-            background: #0056b3;
+            background-color: #0056b3;
+        }
+        .fact {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
         }
     </style>
 </head>
 <body>
-    <div id="fact-container">
-        <h2>AI Fact Generator</h2>
-        <p id="fact">Click the button to get an AI fact!</p>
+    <div class="container">
+        <h1>AI Facts Generator</h1>
         <button onclick="generateFact()">Generate Fact</button>
+        <div class="fact" id="fact"></div>
     </div>
 
     <script>
         const facts = [
-            "AI can now write code, generate images, and compose music.",
-            "Machine learning is a subset of AI that enables systems to learn from data.",
-            "Deep learning uses artificial neural networks inspired by the human brain.",
-            "AI is used in self-driving cars to recognize objects and make driving decisions.",
-            "AI chatbots, like ChatGPT, can hold human-like conversations.",
-            "AI helps detect diseases early through medical imaging analysis.",
-            "The first AI program was written in 1951 by Christopher Strachey.",
-            "AI can analyze vast amounts of data much faster than humans.",
-            "Voice assistants like Siri and Alexa rely on AI-powered natural language processing.",
-            "AI is being used to create realistic deepfake videos and images."
+            "AI can analyze data faster than humans.",
+            "AI is used in autonomous vehicles.",
+            "AI can recognize speech and images.",
+            "AI is used in healthcare for diagnosis.",
+            "AI can beat humans in complex games like chess.",
+            "AI helps in personalizing online shopping experiences.",
+            "AI is used in fraud detection systems.",
+            "AI can automate repetitive tasks.",
+            "AI is used in virtual assistants like Siri and Alexa.",
+            "AI can predict weather patterns."
         ];
 
         function generateFact() {
             const randomIndex = Math.floor(Math.random() * facts.length);
-            document.getElementById("fact").innerText = facts[randomIndex];
+            document.getElementById('fact').innerText = facts[randomIndex];
         }
     </script>
 </body>
